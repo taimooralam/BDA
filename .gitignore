@@ -1,0 +1,11 @@
+BioDataAnalysis-WorkAssessment-Vigra.pdf
+build
+images
+installation
+*~
+*.swp
+*.swo
+.DS_Store
+.idea/
+build/
+thirdparty/
