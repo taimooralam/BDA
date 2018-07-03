@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 BioDataAnalysis-WorkAssessment-Vigra.pdf
 build
 images
@@ -9,3 +10,37 @@ installation
 .idea/
 build/
 thirdparty/
+=======
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+>>>>>>> b9b04da317634ba181de56a081003b5010d8bc3d
