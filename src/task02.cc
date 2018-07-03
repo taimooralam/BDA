@@ -41,6 +41,7 @@ int main(int argc, char** argv)
 	// You can add your code here
 	std::cout << "(supported formats: " << vigra::impexListFormats() << " ) " << std::endl;
 	
+	//Import the image from the source
 	ImageImportInfo v_info(c_LOCAL_SOURCE_IMAGE_PATH.c_str());
 		
 	try{
@@ -57,6 +58,7 @@ int main(int argc, char** argv)
 		//gaussian smooth with scale 3.0
 		gaussianSmoothing(v_in, v_out, 3.0);
 		
+		//export the image to the destination image path
 		exportImage(v_out, c_DESTINATION_IMAGE_PATH.c_str());
 		
 	

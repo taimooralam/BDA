@@ -31,11 +31,11 @@
 
 using namespace vigra;
 
-//const string -- recommended
 const std::string c_GLOBAL_SOURCE_IMAGE_PATH = "/home/alam/Documents/code/BioDataAnalysis-WorkAssessment-Vigra/images/bDZ17-1I_wE02_s7_z1_t1_cGFP_u001.tif";
 const std::string c_LOCAL_SOURCE_IMAGE_PATH = "../images/bDZ17-1I_wE02_s7_z1_t1_cGFP_u001.tif";
 const std::string c_DESTINATION_IMAGE_PATH = "../images/task01_destination_image.tif";
 
+//from and to points to crop the image
 const std::pair<int, int> c_from(400,500);
 const std::pair<int, int> c_to(900,850);
 
@@ -47,17 +47,21 @@ int main(int argc, char** argv)
     // You can add your code here
 	std::cout << "(supported formats: " << vigra::impexListFormats() << " ) " << std::endl;
 	
+	//Import the image from the source
 	ImageImportInfo v_info(c_LOCAL_SOURCE_IMAGE_PATH.c_str());
 		
 	try{
 		//create array view for the whole input image
 		MultiArray<2, UInt8> v_in(v_info.width(), v_info.height());
 		
+		//import the image into the source multiarray
 		importImage(v_info, v_in);
 		
 		//create an array view for the desired subregion
 		MultiArray<2, UInt8> v_out = v_in.subarray(Shape2(c_from.first,c_from.second) , Shape2(c_to.first,c_to.second));
 		
+		
+		//export the destination multiarray to the destination image path
 		exportImage(v_out, c_DESTINATION_IMAGE_PATH.c_str());
 		
 		std::cout << "Task 01 ended" << std::endl;
