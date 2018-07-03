@@ -26,6 +26,7 @@ project(BDAWorkAssessmentVigra VERSION 1.0.0)
 set(COMPANY "BioDataAnalysis GmbH")
 set(COPYRIGHT "Copyright (c) 2017 BioDataAnalysis GmbH. All rights reserved.")
 set(IDENTIFIER "de.biodataanalysis.bdaworkassessmentvigra")
+set(Vigra_DIR "/home/alam/usr/vigra-/lib/vigra/")
 
 find_package(Vigra REQUIRED)
 
