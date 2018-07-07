@@ -1,5 +1,5 @@
 //
-// Developed by:  <Your Name> (your@email)
+// Developed by:  Taimoor Alam taimoor.alam@tum.de
 //                http://www.biodataanalysis.de/
 //
 // With contributions by:
@@ -87,6 +87,8 @@ void segmentImage(MultiArray<2, UInt8> &a_input, MultiArray<2, UInt8> &a_output,
 			a_output[i] = 0;
 		}
 	}
+	
+	std::cout << "Image successfully segemented" << std::endl;
 }
 
 /*
@@ -184,7 +186,7 @@ int main(int argc, char** argv)
 		computeHistogram(v_in,v_hist);
 		
 		
-		//equate the two images temporarily
+		//create array for output the segmented image
 		MultiArray<2, UInt8> v_out(Shape2(v_info.width(),v_info.height()));
 		
 		//computeOTSUSSegmentation
